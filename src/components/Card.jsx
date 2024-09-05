@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -17,7 +18,7 @@ const Card = ({ movie }) => {
         className="flex flex-col items-center border border-gray-200 shadow-lg rounded-2xl overflow-hidden transition-transform transform hover:scale-[101%] w-full sm:w-64 cursor-pointer" // tıklanabilir yapmak için cursor-pointer ekledik
       >
         <div className="w-full h-80 relative">
-          <img
+          <Image
             className="absolute inset-0 w-full h-full object-cover"
             src={poster}
             alt={movie.Title}

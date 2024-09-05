@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'next/navigation'; 
+import Image from 'next/image';
 //useParams dinamik URl segmentlerini almak için kullanacakmışız örn: /movie/:id rotasından useParams ile id yi alabiliriz
 
 export default function MoviePage() {
@@ -40,7 +41,7 @@ export default function MoviePage() {
   return (
     <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
       <div className="flex items-start space-x-6">
-        <img 
+        <Image
           src={movieDetails.Poster === "N/A" ? defaultPoster : movieDetails.Poster} 
           alt={movieDetails.Title} 
           className="w-48 h-auto rounded-lg shadow-md"
